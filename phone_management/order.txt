@@ -1,1 +1,63 @@
-sdfasdsa~
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--Search view-->
+        <record model="ir.ui.view" id="view_phone_search">
+            <field name="name">phone.search</field>
+            <field name="model">phone.phone</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Search Phones">
+                    <field name="name" string="Tên"/>
+                    <field name="brand_id" string="Hãng"/>
+                    <field name="import_price" string="Giá nhập"/>
+                    <field name="sale_price" string="Giá bán"/>
+                    <field name="os" string="Hệ điều hành"/>
+                </search>
+            </field>
+        </record>
+
+        <!--Tree view-->
+        <record model="ir.ui.view" id="view_phone_tree">
+            <field name="name">phone.tree</field>
+            <field name="model">phone.phone</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Danh sách điện thoại">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="brand_id"/>
+                    <field name="import_price"/>
+                    <field name="sale_price"/>
+                    <field name="os"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Form view-->
+        <record model="ir.ui.view" id="view_phone_form">
+            <field name="name">phone.form</field>
+            <field name="model">phone.phone</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Điện thoại">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="brand_id" context="{'create': False}"/>
+                    <field name="import_price"/>
+                    <field name="sale_price"/>
+                    <field name="os"/>
+                    <field name="description"/>
+                </form>
+            </field>
+        </record>
+
+        <!--Actions-->
+        <record model="ir.actions.act_window" id="action_phone">
+            <field name="name">Phone Information</field>
+            <field name="res_model">phone.phone</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</openerp>

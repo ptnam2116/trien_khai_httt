@@ -8,13 +8,13 @@
     "category": "General",
     "depends": ["base"],
     "init_xml": [],
-    "demo_xml": [
+    "demo_xml": ["phone_demo.xml"
     ],
     "update_xml": [
         "phone_view.xml",
         "brand_view.xml",
-        "phone_menu.xml",
-        "phone_demo.xml"
+        "phone_menu.xml"
+        
     ],
     "active": False,
     "installable": True,
