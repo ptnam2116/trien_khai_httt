@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Phone Menu -->
+        <menuitem id="phone_parent" name="Phone Management" icon="STOCK_OPEN"/>
+        <menuitem id="menu_phone_parent" name="Phones" parent="phone_parent"/>
+        
+        <!-- Phones -->
+        <menuitem action="action_phone" id="menu_phone_phone" parent="menu_phone_parent" string="Result"/>
+        
+        <!-- Brands -->
+        <menuitem action="action_brand" id="menu_phone_brand" parent="menu_phone_parent" string="Brands"/>
+    </data>
+</openerp>

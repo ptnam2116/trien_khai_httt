@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <!-- Demo Brands -->
+        <record id="brand_samsung" model="phone.brand">
+            <field name="code">SS</field>
+            <field name="name">Samsung</field>
+            <field name="description">Hãng điện thoại Hàn Quốc</field>
+        </record>
+        <record id="brand_apple" model="phone.brand">
+            <field name="code">AP</field>
+            <field name="name">Apple</field>
+            <field name="description">Hãng điện thoại Mỹ</field>
+        </record>
+        <record id="brand_xiaomi" model="phone.brand">
+            <field name="code">XM</field>
+            <field name="name">Xiaomi</field>
+            <field name="description">Hãng điện thoại Trung Quốc</field>
+        </record>
+
+        <!-- Demo Phones -->
+        <record id="phone_samsung_s23" model="phone.phone">
+            <field name="code">SS23</field>
+            <field name="name">Samsung Galaxy S23</field>
+            <field name="brand_id" ref="brand_samsung"/>
+            <field name="import_price">18000000</field>
+            <field name="sale_price">20000000</field>
+            <field name="description">Điện thoại flagship của Samsung</field>
+            <field name="os">android</field>
+        </record>
+        <record id="phone_iphone_14" model="phone.phone">
+            <field name="code">IP14</field>
+            <field name="name">iPhone 14</field>
+            <field name="brand_id" ref="brand_apple"/>
+            <field name="import_price">22000000</field>
+            <field name="sale_price">25000000</field>
+            <field name="description">Điện thoại mới nhất của Apple</field>
+            <field name="os">ios</field>
+        </record>
+        <record id="phone_xiaomi_13" model="phone.phone">
+            <field name="code">XM13</field>
+            <field name="name">Xiaomi 13</field>
+            <field name="brand_id" ref="brand_xiaomi"/>
+            <field name="import_price">10000000</field>
+            <field name="sale_price">12000000</field>
+            <field name="description">Điện thoại cao cấp của Xiaomi</field>
+            <field name="os">android</field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Tree view -->
+        <record model="ir.ui.view" id="view_brand_tree">
+            <field name="name">brand.tree</field>
+            <field name="model">phone.brand</field>
+            <field name="arch" type="xml">
+                <tree string="Danh sách hãng">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Form view -->
+        <record model="ir.ui.view" id="view_brand_form">
+            <field name="name">brand.form</field>
+            <field name="model">phone.brand</field>
+            <field name="arch" type="xml">
+                <form string="Hãng sản xuất">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="description"/>
+                </form>
+            </field>
+        </record>
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="action_brand">
+            <field name="name">Brands</field>
+            <field name="res_model">phone.brand</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</openerp>
